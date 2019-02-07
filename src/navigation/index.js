@@ -1,9 +1,13 @@
-// @glow
+// @flow
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { HomeScreen, SplashScreen } from '@main';
+import { RegistrationScreen } from '@register';
 
 const AppNavigator = createStackNavigator(
   {
-    home: { screen: HomeScreen }
+    splash: { screen: SplashScreen },
+    home: { screen: HomeScreen },
+    register: { screen: RegistrationScreen }
   },
   {
     initialRouteName: 'home'

@@ -1,6 +1,7 @@
+// @flow
 import React from 'react';
 import { Text as RNText, StyleSheet } from 'react-native';
-import { StyleObj } from '@styleObj';
+import type { StyleObj } from '@styleObj';
 
 type Props = {
   children: string,

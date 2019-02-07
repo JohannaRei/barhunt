@@ -54,7 +54,17 @@ module.system.haste.paths.whitelist=<PROJECT_ROOT>/node_modules/react-native/Lib
 munge_underscores=true
 
 module.name_mapper='^[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)$' -> 'RelativeImageStub'
-module.name_mapper='^@comp' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='@comp' -> '<PROJECT_ROOT>/src/components'
+module.name_mapper='@navi' -> '<PROJECT_ROOT>/src/navigation'
+module.name_mapper='@lang' -> '<PROJECT_ROOT>/src/languages'
+module.name_mapper='@main' -> '<PROJECT_ROOT>/src/screens/Main'
+module.name_mapper='@onboard' -> '<PROJECT_ROOT>/src/screens/Onboarding'
+module.name_mapper='@options' -> '<PROJECT_ROOT>/src/screens/Options'
+module.name_mapper='@register' -> '<PROJECT_ROOT>/src/screens/Registration'
+module.name_mapper='@styleObj' -> 'react-native/Libraries/StyleSheet/StyleSheetTypes'
+module.name_mapper='@stores' -> '<PROJECT_ROOT>/src/stores'
+module.name_mapper='@utils' -> '<PROJECT_ROOT>/src/utils'
+module.name_mapper='@services' -> '<PROJECT_ROOT>/src/services'
 
 module.file_ext=.js
 module.file_ext=.jsx

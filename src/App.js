@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import * as RNLocalize from 'react-native-localize';
-import { setI18nConfig } from '@languages';
+import { setI18nConfig } from '@lang';
 import AppContainer from '@navi';
 
 type Props = {};

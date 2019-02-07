@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { StyleObj } from '@styleObj';
+import type { StyleObj } from '@styleObj';
 
 type Props = {
   children: any,
