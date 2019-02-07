@@ -4,8 +4,10 @@ import * as RNLocalize from 'react-native-localize';
 import { setI18nConfig } from '@languages';
 import AppContainer from '@navi';
 
-export default class App extends Component {
-  constructor(props) {
+type Props = {};
+
+export default class App extends Component<Props> {
+  constructor(props: Props) {
     super(props);
     setI18nConfig();
   }
@@ -24,6 +26,6 @@ export default class App extends Component {
   };
 
   render() {
-    return <View />;
+    return <AppContainer />;
   }
 }
