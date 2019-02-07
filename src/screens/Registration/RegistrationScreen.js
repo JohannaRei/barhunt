@@ -1,23 +1,29 @@
+// @flow
 import React, { Component } from 'react';
 import uuid from 'uuid/v4';
-import { Screen, Content, Text } from '@comp';
+import {
+  Screen, Content, Text, TextInput
+} from '@comp';
 import { User, AppStorage } from '@stores';
 
 type Props = {
   navigation: any
 };
 type State = {
-  username: string
+  username: string,
+  password: string
 };
 
 export default class RegistrationScreen extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      username: ''
+      username: '',
+      password: ''
     };
-    this.userStore = null;
   }
+
+  onChangeText = (key: string, value: string) => this.setState({ [key]: value });
 
   createNewUser = () => {
     const { username } = this.state;
@@ -25,19 +31,21 @@ export default class RegistrationScreen extends Component<Props, State> {
     const userId = uuid();
     const deviceId = uuid();
     const newUser = { username, userId, level: 1 };
-    this.userStore = User.create(newUser);
+    User.create(newUser);
     AppStorage.register(newUser, deviceId); // TODO: yhdistä appstorage ja mst
     navigation.navigate('home');
   };
 
   render() {
-    const { userId, username } = this.state;
+    const { username, password } = this.state;
     return (
       <Screen>
         <Content>
           <Text>Register</Text>
-          <Text>{userId}</Text>
+          <TextInput name="username" onChangeText={this.onChangeText} placeholder="Username" />
           <Text>{username}</Text>
+          <TextInput name="password" onChangeText={this.onChangeText} placeholder="Password" />
+          <Text>{password}</Text>
         </Content>
       </Screen>
     );

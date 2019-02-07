@@ -29,6 +29,7 @@ target 'barhunt' do
   #pod 'RNLocalize', :path => '../node_modules/react-native-localize'
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+  pod 'react-native-mapbox-gl', :path => '../node_modules/@mapbox/react-native-mapbox-gl'
   #pod 'Firebase/Core'
   #pod 'Firebase/Auth'
 end

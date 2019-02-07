@@ -1,6 +1,9 @@
+// @flow
 import { AsyncStorage } from 'react-native';
 
-export const register = async (userData, deviceId) => {
+type UserData = { username: string, level: number, userId: string };
+
+export const register = async (userData: UserData, deviceId: string) => {
   try {
     await AsyncStorage.multiSet([['userdata', JSON.stringify(userData)], ['deviceId', deviceId]]);
   } catch (e) {
@@ -8,7 +11,7 @@ export const register = async (userData, deviceId) => {
   }
 };
 
-export const updateUser = async (userData) => {
+export const updateUser = async (userData: UserData) => {
   try {
     await AsyncStorage.setItem('userdata', JSON.stringify(userData));
   } catch (e) {
@@ -26,7 +29,15 @@ export const logout = async () => {
 
 export const getUserData = async () => {
   try {
-    AsyncStorage.multiGet(['deviceId', 'userdata']);
+    AsyncStorage.getItem('userdata');
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+export const getDeviceId = async () => {
+  try {
+    AsyncStorage.getItem('deviceId');
   } catch (e) {
     console.log(e);
   }

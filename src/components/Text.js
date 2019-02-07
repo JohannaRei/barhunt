@@ -5,7 +5,7 @@ import type { StyleObj } from '@styleObj';
 
 type Props = {
   children: string,
-  style: StyleObj
+  style?: StyleObj
 };
 
 const Text = ({ children, style }: Props) => (

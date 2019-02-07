@@ -5,7 +5,7 @@ import type { StyleObj } from '@styleObj';
 
 type Props = {
   children: any,
-  style: StyleObj
+  style?: StyleObj
 };
 
 const Screen = ({ children, style }: Props) => (
