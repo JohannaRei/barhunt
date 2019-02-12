@@ -815,6 +815,10 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 86BDJMG22C;
+						ProvisioningStyle = Manual;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -1477,8 +1481,11 @@
 			baseConfigurationReference = 1D7E1F650650997DADDA89B3 /* Pods-barhunt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 86BDJMG22C;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = barhunt/Info.plist;
@@ -1491,6 +1498,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.johq.barhunt;
 				PRODUCT_NAME = barhunt;
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.johq.barhunt";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1500,7 +1508,10 @@
 			baseConfigurationReference = B7387AAE40C56543A405646D /* Pods-barhunt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86BDJMG22C;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = barhunt/Info.plist;
@@ -1513,6 +1524,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.johq.barhunt;
 				PRODUCT_NAME = barhunt;
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.johq.barhunt";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
