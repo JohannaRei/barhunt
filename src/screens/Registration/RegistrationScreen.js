@@ -9,6 +9,7 @@ import { User, AppStorage } from '@stores';
 type Props = {
   navigation: any
 };
+
 type State = {
   username: string,
   password: string
@@ -28,11 +29,15 @@ export default class RegistrationScreen extends Component<Props, State> {
   createNewUser = () => {
     const { username } = this.state;
     const { navigation } = this.props;
+
     const userId = uuid();
     const deviceId = uuid();
+
     const newUser = { username, userId, level: 1 };
+
     User.create(newUser);
     AppStorage.register(newUser, deviceId); // TODO: yhdistä appstorage ja mst
+
     navigation.navigate('home');
   };
 

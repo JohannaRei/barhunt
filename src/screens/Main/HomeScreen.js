@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-import { Screen, Content, Text } from '@comp';
+import { Screen, Content, ChallengeButton } from '@comp';
+import challenges from '../data/challenges';
 
 type Props = {};
 type State = {};
@@ -11,11 +12,15 @@ export default class HomeScreen extends Component<Props, State> {
     this.state = {};
   }
 
+  onPressChallenge = (name: string) => console.log(name);
+
   render() {
     return (
       <Screen>
         <Content>
-          <Text>Home screen</Text>
+          {challenges.map(c => (
+            <ChallengeButton onPress={() => this.onPressChallenge(c.name)} data={c} />
+          ))}
         </Content>
       </Screen>
     );

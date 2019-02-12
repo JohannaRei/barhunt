@@ -1,4 +1,4 @@
-package com.barhunt;
+package com.johq.barhunt;
 
 import android.app.Application;
 

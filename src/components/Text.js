@@ -14,7 +14,7 @@ const Text = ({ children, style }: Props) => (
 
 const styles = StyleSheet.create({
   text: {
-    size: 16
+    fontSize: 16
   }
 });
 

@@ -24,6 +24,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		2635AA2B2212DA12003B7A6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2635AA032212DA12003B7A6D /* GoogleService-Info.plist */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -51,13 +52,13 @@
 		AA5602DBF1BA4D3FB8083064 /* libRNLocalize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F87BA8284DCA43FEBB088E35 /* libRNLocalize.a */; };
 		AD4AE496CEB747D7B44251EE /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B306787D4D34C74982DB521 /* FontAwesome.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		C7A127311EB008313F455C6D /* libPods-barhunt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B2C88F8E93AF70D627A1AC /* libPods-barhunt.a */; };
 		CB46160AC8904B4E901E9AEB /* libRNLocalize-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EE4AD92E5B40A893E9CE89 /* libRNLocalize-tvOS.a */; };
 		E50A2B8AC36A41F0882F15B5 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F5218B8E7B849E7944D5715 /* Feather.ttf */; };
 		E8032EDC6071453786A657D1 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8706A9922B1644019286343B /* Zocial.ttf */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		F28692EAFF434F0283A1208C /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCAE84852EA04A948B8ED617 /* MaterialIcons.ttf */; };
+		FBE9695E3E3547AC7D23EEA4 /* libPods-barhunt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA6144847FD65214FD60541 /* libPods-barhunt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,13 +371,16 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = barhunt/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = barhunt/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1D7E1F650650997DADDA89B3 /* Pods-barhunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barhunt.debug.xcconfig"; path = "Target Support Files/Pods-barhunt/Pods-barhunt.debug.xcconfig"; sourceTree = "<group>"; };
 		1F5218B8E7B849E7944D5715 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		200DC19C436840DCA23BEB9C /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		2318F785AB284BCDBA03B541 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		2635AA032212DA12003B7A6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "barhunt/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* barhunt-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "barhunt-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* barhunt-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "barhunt-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E229578E0D8442091CAB3FA /* RNLocalize.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNLocalize.xcodeproj; path = "../node_modules/react-native-localize/ios/RNLocalize.xcodeproj"; sourceTree = "<group>"; };
+		4AA6144847FD65214FD60541 /* libPods-barhunt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-barhunt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B306787D4D34C74982DB521 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		75A4A67BD6484293897F2464 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -389,12 +393,10 @@
 		A29A73915B7D4969BCFAF96F /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B0D821BC168D4D238D47DAC0 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		B7387AAE40C56543A405646D /* Pods-barhunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barhunt.release.xcconfig"; path = "Target Support Files/Pods-barhunt/Pods-barhunt.release.xcconfig"; sourceTree = "<group>"; };
 		BCAE84852EA04A948B8ED617 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		C2B2C88F8E93AF70D627A1AC /* libPods-barhunt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-barhunt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EE4AD92E5B40A893E9CE89 /* libRNLocalize-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNLocalize-tvOS.a"; sourceTree = "<group>"; };
 		CEE55A35BFFA4D0597601D2A /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		D39E103D672878AF32C3F619 /* Pods-barhunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barhunt.release.xcconfig"; path = "Target Support Files/Pods-barhunt/Pods-barhunt.release.xcconfig"; sourceTree = "<group>"; };
-		DDA0B7433DF771C98D092D32 /* Pods-barhunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barhunt.debug.xcconfig"; path = "Target Support Files/Pods-barhunt/Pods-barhunt.debug.xcconfig"; sourceTree = "<group>"; };
 		DE6A2E121ABF4771ACA2F89A /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -429,7 +431,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				AA5602DBF1BA4D3FB8083064 /* libRNLocalize.a in Frameworks */,
-				C7A127311EB008313F455C6D /* libPods-barhunt.a in Frameworks */,
+				FBE9695E3E3547AC7D23EEA4 /* libPods-barhunt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +545,7 @@
 		13B07FAE1A68108700A75B9A /* barhunt */ = {
 			isa = PBXGroup;
 			children = (
+				2635AA032212DA12003B7A6D /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -601,7 +604,7 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				C2B2C88F8E93AF70D627A1AC /* libPods-barhunt.a */,
+				4AA6144847FD65214FD60541 /* libPods-barhunt.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -715,10 +718,9 @@
 		D77E75E62EE12B061B702B1C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DDA0B7433DF771C98D092D32 /* Pods-barhunt.debug.xcconfig */,
-				D39E103D672878AF32C3F619 /* Pods-barhunt.release.xcconfig */,
+				1D7E1F650650997DADDA89B3 /* Pods-barhunt.debug.xcconfig */,
+				B7387AAE40C56543A405646D /* Pods-barhunt.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -747,13 +749,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "barhunt" */;
 			buildPhases = (
-				32C06C90B9BC0AC362BE42AB /* [CP] Check Pods Manifest.lock */,
+				ED95DE5746948E0BAADFE486 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C22B2E1BD954BCC521701805 /* [CP] Copy Pods Resources */,
-				89934321E35F2CA799CBFBB3 /* [CP] Embed Pods Frameworks */,
+				779C67FF1319AEB0B012BBF8 /* [CP] Embed Pods Frameworks */,
+				78F4EC24C894DF0488AA4FAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1198,6 +1200,7 @@
 				2D96B99CB3624C60981B59C3 /* FontAwesome5_Regular.ttf in Resources */,
 				55E317B318F8439FBF694966 /* FontAwesome5_Solid.ttf in Resources */,
 				4662B4C76C7C4DACB95932A6 /* Foundation.ttf in Resources */,
+				2635AA2B2212DA12003B7A6D /* GoogleService-Info.plist in Resources */,
 				32FCD520A78243C1BC680D78 /* Ionicons.ttf in Resources */,
 				A290A5E1394042B4AFCA356A /* MaterialCommunityIcons.ttf in Resources */,
 				F28692EAFF434F0283A1208C /* MaterialIcons.ttf in Resources */,
@@ -1253,29 +1256,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		32C06C90B9BC0AC362BE42AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-barhunt-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		89934321E35F2CA799CBFBB3 /* [CP] Embed Pods Frameworks */ = {
+		779C67FF1319AEB0B012BBF8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1297,7 +1278,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-barhunt/Pods-barhunt-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C22B2E1BD954BCC521701805 /* [CP] Copy Pods Resources */ = {
+		78F4EC24C894DF0488AA4FAC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1345,6 +1326,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-barhunt/Pods-barhunt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED95DE5746948E0BAADFE486 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-barhunt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1471,23 +1474,22 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDA0B7433DF771C98D092D32 /* Pods-barhunt.debug.xcconfig */;
+			baseConfigurationReference = 1D7E1F650650997DADDA89B3 /* Pods-barhunt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-localize/ios",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
+				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = barhunt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)/**";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johq.barhunt;
 				PRODUCT_NAME = barhunt;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1495,22 +1497,21 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D39E103D672878AF32C3F619 /* Pods-barhunt.release.xcconfig */;
+			baseConfigurationReference = B7387AAE40C56543A405646D /* Pods-barhunt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-localize/ios",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
+				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = barhunt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)/**";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johq.barhunt;
 				PRODUCT_NAME = barhunt;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

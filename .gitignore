@@ -58,3 +58,5 @@ buck-out/
 
 #app secrets
 secrets.js
+ios/barhunt/GoogleService-Info.plist
+android/app/google-services.json
