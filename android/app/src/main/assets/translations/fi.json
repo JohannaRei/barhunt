@@ -2,12 +2,17 @@
   "mainScreen": {
     "title": "Koti"
   },
-  "registrationScreen": {
+  "authScreen": {
+    "welcome": "Tervetuloa",
+    "register": "Rekisteröidy",
+    "signin": "Kirjaudu sisään",
     "error": {
       "invalid-email": "Tarkista sähköpostisosoitteen kirjoitusasu.",
       "user-disabled": "Käyttäjä on estetty.",
       "user-not-found": "Käyttäjätiliä ei löydetty.",
       "wrong-password": "Väärä salasana.",
+      "weak-password": "Salasana on liian heikko.",
+      "email-already-in-use": "Sähköpostiosoite on jo käytössä.",
       "unknown": "Tapahtui virhe, ole hyvä ja yritä uudelleen."
     }
   }

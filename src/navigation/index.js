@@ -1,30 +1,30 @@
 // @flow
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { HomeScreen, SplashScreen } from '@main';
-import { RegistrationScreen, LoginScreen } from '@register';
+import { RegistrationScreen, SigninScreen, AuthScreen } from '@auth';
 
-const RegistrationNavigator = createStackNavigator(
+const AuthNavigator = createStackNavigator(
   {
     splash: { screen: SplashScreen },
-    home: { screen: HomeScreen },
-    register: { screen: RegistrationScreen }
+    auth: { screen: AuthScreen },
+    register: { screen: RegistrationScreen },
+    signin: { screen: SigninScreen }
   },
   {
-    initialRouteName: 'register',
+    initialRouteName: 'auth',
     headerMode: 'none'
   }
 );
 
-const LoginNavigator = createStackNavigator(
+const AppNavigator = createStackNavigator(
   {
     splash: { screen: SplashScreen },
-    login: { screen: LoginScreen },
     home: { screen: HomeScreen }
   },
-  { initialRouteName: 'login', headerMode: 'none' }
+  { initialRouteName: 'home', headerMode: 'none' }
 );
 
-const RegistrationContainer = createAppContainer(RegistrationNavigator);
-const LoginContainer = createAppContainer(LoginNavigator);
+const AuthContainer = createAppContainer(AuthNavigator);
+const AppContainer = createAppContainer(AppNavigator);
 
-export { RegistrationContainer, LoginContainer };
+export { AuthContainer, AppContainer };

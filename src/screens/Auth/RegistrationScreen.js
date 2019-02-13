@@ -6,7 +6,6 @@ import {
   Screen, Content, Text, TextInput, Button
 } from '@comp';
 // import { User, AppStorage } from '@stores';
-import i18n from '@lang';
 
 type Props = {
   login?: boolean,
@@ -14,6 +13,7 @@ type Props = {
 };
 
 type State = {
+  username: ?string,
   email: ?string,
   password: ?string,
   errorMsg: ?string
@@ -23,6 +23,7 @@ export class RegistrationScreen extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
+      username: null,
       email: null,
       password: null,
       errorMsg: null
@@ -32,7 +33,7 @@ export class RegistrationScreen extends Component<Props, State> {
   onChangeText = (key: string, value: string) => this.setState({ [key]: value });
 
   onSubmit = () => {
-    const { email, password } = this.state;
+    const { username, email, password } = this.state;
     const { login, navigation } = this.props;
 
     if (email && password) {
@@ -43,6 +44,11 @@ export class RegistrationScreen extends Component<Props, State> {
           .auth()
           .createUserWithEmailAndPassword(email, password)
           .then((user) => {
+            if (user) {
+              user.updateProfile({
+                displayName: username
+              });
+            }
             console.log(user);
           })
           .catch(error => this.handleError(error));
@@ -51,6 +57,7 @@ export class RegistrationScreen extends Component<Props, State> {
           .auth()
           .signInWithEmailAndPassword(email, password)
           .then((user) => {
+            console.log(user);
             navigation.navigate('home');
           })
           .catch(error => this.handleError(error));
@@ -59,33 +66,41 @@ export class RegistrationScreen extends Component<Props, State> {
   };
 
   handleError = (error: { code: string }) => {
+    console.log(error.message);
     const { code } = error;
-    const errorMsg = i18n(`registrationScreen.error.${code.substring(5)}`);
+    const errorMsg = `authScreen.error.${code ? code.substring(5) : 'unknown'}`;
     this.setState({ errorMsg, password: '' });
   };
 
   render() {
     const { login } = this.props;
-    const { email, password, errorMsg } = this.state;
-    const title = login ? 'Login' : 'Register';
+    const {
+      username, email, password, errorMsg
+    } = this.state;
+    const title = `authScreen.${login ? 'signin' : 'register'}`;
     return (
       <Screen>
         <Content>
-          <Text>{title}</Text>
+          <Text tx={title} />
+          <TextInput
+            name="username"
+            onChangeText={this.onChangeText}
+            placeholder="Username"
+            value={username}
+          />
           <TextInput
             name="email"
             onChangeText={this.onChangeText}
             placeholder="Email"
             value={email}
           />
-          <Text>{email}</Text>
           <TextInput
             name="password"
             onChangeText={this.onChangeText}
             placeholder="Password"
             value={password}
           />
-          <Text style={{ color: 'red' }}>{errorMsg}</Text>
+          <Text style={{ color: 'red' }} tx={errorMsg} />
           <Button onPress={this.onSubmit} title={title} />
         </Content>
       </Screen>
@@ -93,6 +108,6 @@ export class RegistrationScreen extends Component<Props, State> {
   }
 }
 
-const LoginScreen = (props: Props) => <RegistrationScreen login {...props} />;
+const SigninScreen = (props: Props) => <RegistrationScreen login {...props} />;
 
-export { LoginScreen };
+export { SigninScreen };

@@ -16,7 +16,7 @@ module.exports = {
           '@main': './src/screens/Main',
           '@onboard': './src/screens/Onboarding',
           '@options': './src/screens/Options',
-          '@register': './src/screens/Registration',
+          '@auth': './src/screens/Auth',
           '@styleObj': 'react-native/Libraries/StyleSheet/StyleSheetTypes',
           '@stores': './src/stores',
           '@utils': './src/utils',
