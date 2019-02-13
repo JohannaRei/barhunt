@@ -6,7 +6,8 @@ import MapView from './MapView';
 import TextInput from './TextInput';
 import ChallengeButton from './ChallengeButton';
 import Icon from './Icon';
+import Button from './Button';
 
 export {
-  Screen, Text, Content, MapView, TextInput, ChallengeButton, Icon
+  Screen, Text, Content, MapView, TextInput, ChallengeButton, Icon, Button
 };

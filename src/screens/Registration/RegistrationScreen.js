@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import uuid from 'uuid/v4';
 import {
-  Screen, Content, Text, TextInput
+  Screen, Content, Text, TextInput, Button
 } from '@comp';
 import { User, AppStorage } from '@stores';
 
@@ -26,7 +26,7 @@ export default class RegistrationScreen extends Component<Props, State> {
 
   onChangeText = (key: string, value: string) => this.setState({ [key]: value });
 
-  createNewUser = () => {
+  onSubmit = () => {
     const { username } = this.state;
     const { navigation } = this.props;
 
@@ -51,6 +51,7 @@ export default class RegistrationScreen extends Component<Props, State> {
           <Text>{username}</Text>
           <TextInput name="password" onChangeText={this.onChangeText} placeholder="Password" />
           <Text>{password}</Text>
+          <Button onPress={this.onSubmit} title="Register" />
         </Content>
       </Screen>
     );
