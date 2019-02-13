@@ -1,5 +1,14 @@
 {
   "mainScreen": {
     "title": "Home"
+  },
+  "registrationScreen": {
+    "error": {
+      "invalid-email": "The email address is not formatted correctly.",
+      "user-disabled": "User has been disabled",
+      "user-not-found": "User not found.",
+      "wrong-password": "Wrong password.",
+      "unknown": "An error occurred, please try again."
+    }
   }
 }

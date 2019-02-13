@@ -1,4 +1,4 @@
 // @flow
-import RegistrationScreen from './RegistrationScreen';
+import { RegistrationScreen, LoginScreen } from './RegistrationScreen';
 
-export { RegistrationScreen };
+export { RegistrationScreen, LoginScreen };

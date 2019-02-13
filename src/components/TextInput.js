@@ -7,11 +7,12 @@ import variables from './styles/variables';
 type Props = {
   onChangeText: (text: string, name: string) => void,
   style?: StyleObj,
-  name: string
+  name: string,
+  value: ?string
 };
 
 const TextInput = ({
-  onChangeText, style, name, ...props
+  onChangeText, style, name, value, ...props
 }: Props) => (
   <RNTextInput
     {...props}
@@ -20,6 +21,7 @@ const TextInput = ({
     secureTextEntry={name === 'password'}
     placeholderTextColor={variables.placeholderText}
     autoComplete={name}
+    value={value}
   />
 );
 

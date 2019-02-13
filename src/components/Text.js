@@ -4,7 +4,7 @@ import { Text as RNText, StyleSheet } from 'react-native';
 import type { StyleObj } from '@styleObj';
 
 type Props = {
-  children: string,
+  children: ?string,
   style?: StyleObj
 };
 

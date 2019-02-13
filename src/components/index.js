@@ -7,7 +7,8 @@ import TextInput from './TextInput';
 import ChallengeButton from './ChallengeButton';
 import Icon from './Icon';
 import Button from './Button';
+import Loader from './Loader';
 
 export {
-  Screen, Text, Content, MapView, TextInput, ChallengeButton, Icon, Button
+  Screen, Text, Content, MapView, TextInput, ChallengeButton, Icon, Button, Loader
 };

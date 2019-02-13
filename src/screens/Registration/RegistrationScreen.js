@@ -1,59 +1,98 @@
 // @flow
 import React, { Component } from 'react';
-import uuid from 'uuid/v4';
+// import uuid from 'uuid/v4';
+import firebase from 'react-native-firebase';
 import {
   Screen, Content, Text, TextInput, Button
 } from '@comp';
-import { User, AppStorage } from '@stores';
+// import { User, AppStorage } from '@stores';
+import i18n from '@lang';
 
 type Props = {
+  login?: boolean,
   navigation: any
 };
 
 type State = {
-  username: string,
-  password: string
+  email: ?string,
+  password: ?string,
+  errorMsg: ?string
 };
 
-export default class RegistrationScreen extends Component<Props, State> {
+export class RegistrationScreen extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      username: '',
-      password: ''
+      email: null,
+      password: null,
+      errorMsg: null
     };
   }
 
   onChangeText = (key: string, value: string) => this.setState({ [key]: value });
 
   onSubmit = () => {
-    const { username } = this.state;
-    const { navigation } = this.props;
+    const { email, password } = this.state;
+    const { login, navigation } = this.props;
 
-    const userId = uuid();
-    const deviceId = uuid();
+    if (email && password) {
+      // const deviceId = uuid();
 
-    const newUser = { username, userId, level: 1 };
+      if (!login) {
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(email, password)
+          .then((user) => {
+            console.log(user);
+          })
+          .catch(error => this.handleError(error));
+      } else {
+        firebase
+          .auth()
+          .signInWithEmailAndPassword(email, password)
+          .then((user) => {
+            navigation.navigate('home');
+          })
+          .catch(error => this.handleError(error));
+      }
+    }
+  };
 
-    User.create(newUser);
-    AppStorage.register(newUser, deviceId); // TODO: yhdistä appstorage ja mst
-
-    navigation.navigate('home');
+  handleError = (error: { code: string }) => {
+    const { code } = error;
+    const errorMsg = i18n(`registrationScreen.error.${code.substring(5)}`);
+    this.setState({ errorMsg, password: '' });
   };
 
   render() {
-    const { username, password } = this.state;
+    const { login } = this.props;
+    const { email, password, errorMsg } = this.state;
+    const title = login ? 'Login' : 'Register';
     return (
       <Screen>
         <Content>
-          <Text>Register</Text>
-          <TextInput name="username" onChangeText={this.onChangeText} placeholder="Username" />
-          <Text>{username}</Text>
-          <TextInput name="password" onChangeText={this.onChangeText} placeholder="Password" />
-          <Text>{password}</Text>
-          <Button onPress={this.onSubmit} title="Register" />
+          <Text>{title}</Text>
+          <TextInput
+            name="email"
+            onChangeText={this.onChangeText}
+            placeholder="Email"
+            value={email}
+          />
+          <Text>{email}</Text>
+          <TextInput
+            name="password"
+            onChangeText={this.onChangeText}
+            placeholder="Password"
+            value={password}
+          />
+          <Text style={{ color: 'red' }}>{errorMsg}</Text>
+          <Button onPress={this.onSubmit} title={title} />
         </Content>
       </Screen>
     );
   }
 }
+
+const LoginScreen = (props: Props) => <RegistrationScreen login {...props} />;
+
+export { LoginScreen };

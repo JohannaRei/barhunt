@@ -1,7 +1,7 @@
 // @flow
 import { AsyncStorage } from 'react-native';
 
-type UserData = { username: string, level: number, userId: string };
+type UserData = { username: string, level: number, id: string };
 
 export const register = async (userData: UserData, deviceId: string) => {
   try {

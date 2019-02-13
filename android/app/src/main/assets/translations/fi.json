@@ -1,5 +1,14 @@
 {
   "mainScreen": {
     "title": "Koti"
+  },
+  "registrationScreen": {
+    "error": {
+      "invalid-email": "Tarkista sähköpostisosoitteen kirjoitusasu.",
+      "user-disabled": "Käyttäjä on estetty.",
+      "user-not-found": "Käyttäjätiliä ei löydetty.",
+      "wrong-password": "Väärä salasana.",
+      "unknown": "Tapahtui virhe, ole hyvä ja yritä uudelleen."
+    }
   }
 }
