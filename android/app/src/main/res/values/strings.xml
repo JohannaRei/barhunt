@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">barhunt</string>
+    <string name="facebook_app_id">407299046508081</string>
+    <string name="fb_login_protocol_scheme">fb407299046508081</string>
 </resources>

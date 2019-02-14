@@ -17,6 +17,7 @@
     "mobx-state-tree": "^3.10.2",
     "react": "16.6.3",
     "react-native": "0.58.4",
+    "react-native-fbsdk": "^0.8.0",
     "react-native-firebase": "^5.2.2",
     "react-native-gesture-handler": "^1.0.15",
     "react-native-localize": "^1.0.2",
