@@ -9,7 +9,7 @@ type Props = {
 const StartScreen = ({ navigation }: Props) => (
   <Screen>
     <Content>
-      <Button onPress={() => navigation.navigate('nameScreen')} title="Start" />
+      <Button onPress={() => navigation.navigate('name')} title="Start" />
     </Content>
   </Screen>
 );

@@ -24,7 +24,7 @@ export default class NameScreen extends Component<Props, State> {
   onSubmitName = () => {
     const { navigation } = this.props;
     // submit name logic here
-    navigation.navigate('mainScreen');
+    navigation.navigate('home');
   };
 
   render() {

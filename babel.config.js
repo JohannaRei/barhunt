@@ -21,7 +21,8 @@ module.exports = {
           '@stores': './src/stores',
           '@utils': './src/utils',
           '@services': './src/services',
-          '@navi': './src/navigation'
+          '@navi': './src/navigation',
+          '@chal': './src/screens/Challenge'
         }
       }
     ]
