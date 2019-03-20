@@ -65,7 +65,7 @@ export class RegistrationScreen extends Component<Props, State> {
     }
   };
 
-  handleError = (error: { code: string }) => {
+  handleError = (error: { code: string, message: string }) => {
     console.log(error.message);
     const { code } = error;
     const errorMsg = `authScreen.error.${code ? code.substring(5) : 'unknown'}`;

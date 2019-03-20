@@ -6,12 +6,12 @@ import { I18nManager } from 'react-native';
 
 const translationGetters = {
   fi: () => require('../../android/app/src/main/assets/translations/fi.json'), // eslint-disable-line global-require
-  en: () => require('../../android/app/src/main/assets/translations/en.json'), // eslint-disable-line global-require
+  en: () => require('../../android/app/src/main/assets/translations/en.json') // eslint-disable-line global-require
 };
 
 const translate = memoize(
   (key, config) => i18n.t(key, config),
-  (key, config) => (config ? key + JSON.stringify(config) : key),
+  (key, config) => (config ? key + JSON.stringify(config) : key)
 );
 
 const setI18nConfig = () => {

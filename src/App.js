@@ -5,7 +5,7 @@ import firebase from 'react-native-firebase';
 import { setI18nConfig } from '@lang';
 import { AuthContainer, AppContainer } from '@navi';
 import { Loader } from '@comp';
-import { SECRET } from 'react-native-dotenv';
+// import { SECRET } from 'react-native-dotenv';
 
 type Props = {};
 type State = {
@@ -46,8 +46,8 @@ export default class App extends Component<Props, State> {
     if (loading) {
       return <Loader />;
     }
-    if (user) {
-      return <AuthContainer />;
+    if (!user) {
+      return <AppContainer />;
     }
     return <AuthContainer />;
   }

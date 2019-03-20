@@ -65,6 +65,7 @@ module.name_mapper='@styleObj' -> 'react-native/Libraries/StyleSheet/StyleSheetT
 module.name_mapper='@stores' -> '<PROJECT_ROOT>/src/stores'
 module.name_mapper='@utils' -> '<PROJECT_ROOT>/src/utils'
 module.name_mapper='@services' -> '<PROJECT_ROOT>/src/services'
+module.name_mapper='@chal' -> '<PROJECT_ROOT>/src/screens/Challenge'
 
 module.file_ext=.js
 module.file_ext=.jsx

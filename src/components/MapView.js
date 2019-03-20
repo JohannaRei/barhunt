@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Mapbox from '@mapbox/react-native-mapbox-gl';
-import { mapboxAccessToken } from '../../secrets';
+import mapboxAccessToken from '../../secrets';
 
 Mapbox.setAccessToken(mapboxAccessToken);
 

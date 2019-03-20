@@ -2,6 +2,7 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { HomeScreen, SplashScreen } from '@main';
 import { RegistrationScreen, SigninScreen, AuthScreen } from '@auth';
+import { ChallengeStartScreen, LocationClueScreen } from '@chal';
 
 const AuthNavigator = createStackNavigator(
   {
@@ -19,7 +20,9 @@ const AuthNavigator = createStackNavigator(
 const AppNavigator = createStackNavigator(
   {
     splash: { screen: SplashScreen },
-    home: { screen: HomeScreen }
+    home: { screen: HomeScreen },
+    challengeStart: { screen: ChallengeStartScreen },
+    locationClue: { screen: LocationClueScreen }
   },
   { initialRouteName: 'home', headerMode: 'none' }
 );
