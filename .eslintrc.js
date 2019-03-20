@@ -2,7 +2,7 @@ module.exports = {
   extends: 'airbnb',
   parser: 'babel-eslint',
   env: {
-    jest: true,
+    jest: true
   },
   rules: {
     'no-use-before-define': 'off',
@@ -12,8 +12,9 @@ module.exports = {
     'react/require-default-props': 'off',
     'no-param-reassign': 'off',
     'import/no-unresolved': 'off',
+    'react/no-unescaped-entities': 'off'
   },
   globals: {
-    fetch: false,
-  },
+    fetch: false
+  }
 };
