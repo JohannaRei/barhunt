@@ -3,7 +3,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { HomeScreen, SplashScreen } from '@main';
 import { RegistrationScreen, SigninScreen, AuthScreen } from '@auth';
 import { ChallengeStartScreen, LocationClueScreen } from '@chal';
-import { 
+import {
   StartScreen,
   NameScreen,
   GroupSelectionScreen,

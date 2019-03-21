@@ -30,7 +30,7 @@ export class RegistrationScreen extends Component<Props, State> {
     };
   }
 
-  onChangeText = (key: string, value: string) => this.setState({ [key]: value });
+  onChangeText = (value: string, key: string) => this.setState({ [key]: value });
 
   onSubmit = () => {
     const { username, email, password } = this.state;

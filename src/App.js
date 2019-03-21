@@ -43,12 +43,14 @@ export default class App extends Component<Props, State> {
 
   render() {
     const { loading, user } = this.state;
-    if (loading) {
+
+    /* if (loading) {
       return <Loader />;
     }
     if (user) {
       return <AppContainer />;
-    }
+    } */
+
     return <OnboardingContainer />;
   }
 }

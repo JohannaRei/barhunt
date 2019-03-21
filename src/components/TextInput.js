@@ -16,7 +16,7 @@ const TextInput = ({
 }: Props) => (
   <RNTextInput
     {...props}
-    onChangeText={text => onChangeText(name, text)}
+    onChangeText={text => onChangeText(text, name)}
     style={[styles.input, style]}
     secureTextEntry={name === 'password'}
     placeholderTextColor={variables.placeholderText}
