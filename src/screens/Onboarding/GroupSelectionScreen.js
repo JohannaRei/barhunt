@@ -22,9 +22,9 @@ export default class GroupSelectionScreen extends Component<Props> {
     return (
       <Screen>
         <Content>
-          <Text>Register</Text>
-          <Button title="Solo" onPress={() => this.onPressButton('home')} />
-          <Button title="Group" onPress={() => this.onPressButton('group')} />
+          <Text tx="groupSelectionScreen.title" />
+          <Button title="groupSelectionScreen.solo" onPress={() => this.onPressButton('home')} />
+          <Button title="groupSelectionScreen.group" onPress={() => this.onPressButton('group')} />
         </Content>
       </Screen>
     );

@@ -1,6 +1,8 @@
 // @flow
 import React from 'react';
-import { Screen, Content, Button } from '@comp';
+import {
+  Screen, Content, Button, Text
+} from '@comp';
 
 type Props = {
   navigation: any
@@ -9,7 +11,8 @@ type Props = {
 const StartScreen = ({ navigation }: Props) => (
   <Screen>
     <Content>
-      <Button onPress={() => navigation.navigate('name')} title="Start" />
+      <Text tx="startScreen.welcome" />
+      <Button onPress={() => navigation.navigate('name')} title="startScreen.button" />
     </Content>
   </Screen>
 );

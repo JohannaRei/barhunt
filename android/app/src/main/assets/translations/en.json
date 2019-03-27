@@ -1,4 +1,17 @@
 {
+  "startScreen": {
+    "welcome": "Welcome to",
+    "button": "Start"
+  },
+  "nameScreen": {
+    "title": "Hello, my name is",
+    "button": "That's me!"
+  },
+  "groupSelectionSCreen": {
+    "title": "Register",
+    "solo": "Solo",
+    "group": "Group"
+  },
   "mainScreen": {
     "title": "Home"
   },

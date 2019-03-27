@@ -12,7 +12,8 @@ module.exports = {
     'react/require-default-props': 'off',
     'no-param-reassign': 'off',
     'import/no-unresolved': 'off',
-    'react/no-unescaped-entities': 'off'
+    'react/no-unescaped-entities': 'off',
+    'react/sort-comp': 'off'
   },
   globals: {
     fetch: false

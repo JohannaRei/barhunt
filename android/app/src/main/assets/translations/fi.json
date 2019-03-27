@@ -1,4 +1,17 @@
 {
+  "startScreen": {
+    "welcome": "Tervetuloa",
+    "button": "Aloita"
+  },
+  "nameScreen": {
+    "title": "Hei, nimeni on",
+    "button": "Jatka"
+  },
+  "groupSelectionSCreen": {
+    "title": "Pelaa",
+    "solo": "Yksilönä",
+    "group": "Joukkueena"
+  },
   "mainScreen": {
     "title": "Koti"
   },

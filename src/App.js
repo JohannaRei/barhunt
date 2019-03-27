@@ -16,6 +16,8 @@ type State = {
 };
 
 export default class App extends Component<Props, State> {
+  authSubscription: ?any;
+
   constructor(props: Props) {
     super(props);
     setI18nConfig();
@@ -23,6 +25,7 @@ export default class App extends Component<Props, State> {
       loading: true,
       user: null
     };
+    this.authSubscription = null;
   }
 
   componentDidMount() {
@@ -44,12 +47,12 @@ export default class App extends Component<Props, State> {
   render() {
     const { loading, user } = this.state;
 
-    /* if (loading) {
+    if (loading) {
       return <Loader />;
     }
     if (user) {
       return <AppContainer />;
-    } */
+    }
 
     return <OnboardingContainer />;
   }

@@ -32,9 +32,9 @@ export default class NameScreen extends Component<Props, State> {
     return (
       <Screen>
         <Content>
-          <Text>What's your name?</Text>
+          <Text tx="nameScreen.title" />
           <TextInput name="name" onChangeText={this.onChangeName} value={('name', name)} />
-          <Button onPress={this.onSubmitName} title="That's me!" />
+          <Button onPress={this.onSubmitName} title="nameScreen.button" />
         </Content>
       </Screen>
     );
