@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { Screen, Content, Text } from '@comp';
+import { Screen, Text } from '@comp';
 
 type Props = {
   navigation: any
@@ -21,13 +21,11 @@ export default class ChallengeStartScreen extends Component<Props, State> {
   render() {
     return (
       <Screen>
-        <Content>
-          <Text>Challenge</Text>
-          {/* title */}
-          {/* description, level, timer yms. */}
-          {/* map */}
-          {/* start */}
-        </Content>
+        <Text>Challenge</Text>
+        {/* title */}
+        {/* description, level, timer yms. */}
+        {/* map */}
+        {/* start */}
       </Screen>
     );
   }

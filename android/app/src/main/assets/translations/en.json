@@ -7,10 +7,14 @@
     "title": "Hello, my name is",
     "button": "That's me!"
   },
-  "groupSelectionSCreen": {
+  "groupSelectionScreen": {
     "title": "Register",
     "solo": "Solo",
     "group": "Group"
+  },
+  "groupRegistrationScreen": {
+    "title": "Team members",
+    "addButton": "Add"
   },
   "mainScreen": {
     "title": "Home"
@@ -28,5 +32,8 @@
       "email-already-in-use": "This email address is already in use.",
       "unknown": "An error occurred, please try again."
     }
+  },
+  "locationClueScreen": {
+    "title": "Location"
   }
 }

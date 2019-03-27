@@ -7,10 +7,14 @@
     "title": "Hei, nimeni on",
     "button": "Jatka"
   },
-  "groupSelectionSCreen": {
+  "groupSelectionScreen": {
     "title": "Pelaa",
     "solo": "Yksilönä",
     "group": "Joukkueena"
+  },
+  "groupRegistrationScreen": {
+    "title": "Joukkueen jäsenet",
+    "addButton": "Lisää"
   },
   "mainScreen": {
     "title": "Koti"

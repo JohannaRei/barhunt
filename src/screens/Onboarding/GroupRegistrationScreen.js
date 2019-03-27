@@ -1,9 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import {
-  Screen, Content, Text, TextInput, Button
-} from '@comp';
+import { Screen, Text, TextInput } from '@comp';
+import { Button } from 'native-base';
 
 type Props = {
   navigation: any
@@ -45,17 +44,19 @@ export default class GroupRegistrationScreen extends Component<Props, State> {
     const { newMember, addNew } = this.state;
     return (
       <Screen>
-        <Content>
-          <Text>Add group members</Text>
-          {!addNew ? (
-            <Button title="+" onPress={() => this.setState({ addNew: true })} />
-          ) : (
-            <View>
-              <TextInput name="newMember" onChangeText={this.onChangeText} value={newMember} />
-              <Button title="add" onPress={() => this.addToGroup('member')} />
-            </View>
-          )}
-        </Content>
+        <Text tx="groupRegistrationScreen.title" />
+        {!addNew ? (
+          <Button onPress={() => this.setState({ addNew: true })}>
+            <Text>+</Text>
+          </Button>
+        ) : (
+          <View>
+            <TextInput name="newMember" onChangeText={this.onChangeText} value={newMember} />
+            <Button onPress={() => this.addToGroup('member')}>
+              <Text tx="groupRegistrationScreen.addButton" />
+            </Button>
+          </View>
+        )}
       </Screen>
     );
   }

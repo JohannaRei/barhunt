@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { Screen, Content, ChallengeButton } from '@comp';
+import { Screen, ChallengeButton } from '@comp';
 import challenges from '../data/challenges'; // todo: move to firestore
 
 type Props = {
@@ -24,11 +24,9 @@ export default class HomeScreen extends Component<Props, State> {
   render() {
     return (
       <Screen>
-        <Content>
-          {challenges.map(c => (
-            <ChallengeButton onPress={() => this.onPressChallenge(c.name)} data={c} />
-          ))}
-        </Content>
+        {challenges.map(c => (
+          <ChallengeButton onPress={() => this.onPressChallenge(c.name)} data={c} />
+        ))}
       </Screen>
     );
   }

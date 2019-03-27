@@ -2,9 +2,8 @@
 import React, { Component } from 'react';
 // import uuid from 'uuid/v4';
 import firebase from 'react-native-firebase';
-import {
-  Screen, Content, Text, TextInput, Button
-} from '@comp';
+import { Screen, Text, TextInput } from '@comp';
+import { Button } from 'native-base';
 // import { User, AppStorage } from '@stores';
 
 type Props = {
@@ -80,29 +79,29 @@ export class RegistrationScreen extends Component<Props, State> {
     const title = `authScreen.${login ? 'signin' : 'register'}`;
     return (
       <Screen>
-        <Content>
+        <Text tx={title} />
+        <TextInput
+          name="username"
+          onChangeText={this.onChangeText}
+          placeholder="Username"
+          value={username}
+        />
+        <TextInput
+          name="email"
+          onChangeText={this.onChangeText}
+          placeholder="Email"
+          value={email}
+        />
+        <TextInput
+          name="password"
+          onChangeText={this.onChangeText}
+          placeholder="Password"
+          value={password}
+        />
+        <Text style={{ color: 'red' }} tx={errorMsg} />
+        <Button onPress={this.onSubmit}>
           <Text tx={title} />
-          <TextInput
-            name="username"
-            onChangeText={this.onChangeText}
-            placeholder="Username"
-            value={username}
-          />
-          <TextInput
-            name="email"
-            onChangeText={this.onChangeText}
-            placeholder="Email"
-            value={email}
-          />
-          <TextInput
-            name="password"
-            onChangeText={this.onChangeText}
-            placeholder="Password"
-            value={password}
-          />
-          <Text style={{ color: 'red' }} tx={errorMsg} />
-          <Button onPress={this.onSubmit} title={title} />
-        </Content>
+        </Button>
       </Screen>
     );
   }

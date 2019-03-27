@@ -1,8 +1,7 @@
 // @flow
 import React from 'react';
-import {
-  Screen, Content, Button, Text
-} from '@comp';
+import { Screen, Text } from '@comp';
+import { Button } from 'native-base';
 
 type Props = {
   navigation: any
@@ -10,10 +9,10 @@ type Props = {
 
 const StartScreen = ({ navigation }: Props) => (
   <Screen>
-    <Content>
-      <Text tx="startScreen.welcome" />
-      <Button onPress={() => navigation.navigate('name')} title="startScreen.button" />
-    </Content>
+    <Text tx="startScreen.welcome" />
+    <Button block onPress={() => navigation.navigate('name')}>
+      <Text tx="startScreen.button" />
+    </Button>
   </Screen>
 );
 

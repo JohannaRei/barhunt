@@ -1,8 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-import {
-  Screen, Content, Text, Button
-} from '@comp';
+import { Screen, Text } from '@comp';
+import { Button } from 'native-base';
 
 type Props = {
   navigation: any
@@ -17,11 +16,13 @@ export default class AuthScreen extends Component<Props> {
   render() {
     return (
       <Screen>
-        <Content>
-          <Text tx="authScreen.welcome" />
-          <Button onPress={() => this.navigateTo('register')} title="authScreen.register" />
-          <Button onPress={() => this.navigateTo('signin')} title="authScreen.signin" />
-        </Content>
+        <Text tx="authScreen.welcome" />
+        <Button block onPress={() => this.navigateTo('register')}>
+          <Text tx="authScreen.register" />
+        </Button>
+        <Button block onPress={() => this.navigateTo('signin')}>
+          <Text tx="authScreen.signin" />
+        </Button>
       </Screen>
     );
   }

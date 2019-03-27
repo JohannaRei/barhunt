@@ -1,23 +1,19 @@
 // @flow
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import type { StyleObj } from '@styleObj';
+import { StyleProvider, Container, Content } from 'native-base';
+import getTheme from '../native-base-theme/components';
+import platform from '../native-base-theme/variables/platform';
 
 type Props = {
-  children: any,
-  style?: StyleObj
+  children: any
 };
 
-const Screen = ({ children, style }: Props) => (
-  <View style={[styles.container, style]}>{children}</View>
+const Screen = ({ children }: Props) => (
+  <StyleProvider style={getTheme(platform)}>
+    <Container>
+      <Content>{children}</Content>
+    </Container>
+  </StyleProvider>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: 40
-  }
-});
 
 export default Screen;

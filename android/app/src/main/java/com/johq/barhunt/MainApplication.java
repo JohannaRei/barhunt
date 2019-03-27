@@ -3,6 +3,7 @@ package com.johq.barhunt;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.mapbox.rctmgl.RCTMGLPackage;
 import io.invertase.firebase.RNFirebasePackage;
 import com.mapbox.rctmgl.RCTMGLPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -36,7 +37,8 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(new MainReactPackage(), new FBSDKPackage(mCallbackManager),
+      return Arrays.<ReactPackage>asList(new MainReactPackage(),
+            new RCTMGLPackage(), new FBSDKPackage(mCallbackManager),
           new RNFirebasePackage(), new RCTMGLPackage(), new VectorIconsPackage(), new RNLocalizePackage(),
           new RNGestureHandlerPackage(), new RNFirebaseAuthPackage());
     }

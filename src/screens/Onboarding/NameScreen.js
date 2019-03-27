@@ -1,8 +1,8 @@
 // @flow
 import React, { Component } from 'react';
-import {
-  Screen, Content, TextInput, Text, Button
-} from '@comp';
+import { StyleSheet, View } from 'react-native';
+import { Screen, TextInput, Text } from '@comp';
+import { Button } from 'native-base';
 
 type Props = {
   navigation: any
@@ -31,12 +31,29 @@ export default class NameScreen extends Component<Props, State> {
     const { name } = this.state;
     return (
       <Screen>
-        <Content>
+        <View style={styles.nameTag}>
           <Text tx="nameScreen.title" />
           <TextInput name="name" onChangeText={this.onChangeName} value={('name', name)} />
-          <Button onPress={this.onSubmitName} title="nameScreen.button" />
-        </Content>
+        </View>
+        <Button bottom onPress={this.onSubmitName}>
+          <Text tx="nameScreen.button" />
+        </Button>
       </Screen>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  nameTag: {
+    position: 'absolute',
+    right: 10,
+    top: 200,
+    height: 100,
+    width: 200,
+    justifyContent: 'center'
+  },
+  button: {
+    position: 'absolute',
+    bottom: 20
+  }
+});

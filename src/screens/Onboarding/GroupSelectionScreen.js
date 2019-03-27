@@ -1,8 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-import {
-  Screen, Content, Text, Button
-} from '@comp';
+import { Screen, Text } from '@comp';
+import { Button } from 'native-base';
 
 type Props = {
   navigation: any
@@ -21,11 +20,13 @@ export default class GroupSelectionScreen extends Component<Props> {
   render() {
     return (
       <Screen>
-        <Content>
-          <Text tx="groupSelectionScreen.title" />
-          <Button title="groupSelectionScreen.solo" onPress={() => this.onPressButton('home')} />
-          <Button title="groupSelectionScreen.group" onPress={() => this.onPressButton('group')} />
-        </Content>
+        <Text tx="groupSelectionScreen.title" />
+        <Button onPress={() => this.onPressButton('home')}>
+          <Text tx="groupSelectionScreen.solo" />
+        </Button>
+        <Button onPress={() => this.onPressButton('group')}>
+          <Text tx="groupSelectionScreen.group" />
+        </Button>
       </Screen>
     );
   }
