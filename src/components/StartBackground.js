@@ -4,41 +4,32 @@ import { Svg, Polygon } from 'react-native-svg';
 import { Dimensions } from 'react-native';
 
 const StartBackground = () => {
-  const height = Dimensions.get('window').height / 5;
-  const heights = [height, height * 2, height * 3, height * 4];
-  const width = Dimensions.get('window').width / 5;
-  const widths = [width, width * 2, width * 3, width * 4, width * 5];
+  const { height, width } = Dimensions.get('window');
+  const heights = [height * 0.2, height * 0.4, height * 0.6, height * 0.8];
+  const widths = [width * 0.2, width * 0.4, width * 0.6, width * 0.8, width];
+
+  const generatePoints = (type) => {
+    let points = '0,0';
+    for (let i = -1; i < 6; i += 1) {
+      let w = 0;
+      let h = heights[type];
+      if (i >= 0 && i < 5) {
+        w = widths[i];
+      } else if (i > 4) {
+        w = widths[4];
+        h = 0;
+      }
+      const random = (i + 2) % 2 === 0 ? -30 : 30; // todo: actually make this randomized
+      points += ` ${w},${h + random}`;
+    }
+    return points;
+  };
 
   return (
-    <Svg height="1000" width="2000">
-      <Polygon
-        points={`0,0 0,${heights[2]} ${widths[0]},${heights[2] + 50} ${widths[1]},${heights[2]
-          - 30} ${widths[2]},${heights[2] + 10} ${widths[3]},${heights[2] - 20} ${widths[4]},${
-          heights[2]
-        } ${widths[4]},0`}
-        fill="yellow"
-        stroke="yellow"
-        strokeWidth="1"
-      />
-      <Polygon
-        points={`0,0 0,${heights[1]} ${widths[0]},${heights[1] + 40} ${widths[1]},${heights[1]
-          - 20} ${widths[2]},${heights[1] + 30} ${widths[3]},${heights[1] - 10} ${
-          widths[4]
-        },${heights[1] + 40} ${widths[4]},0`}
-        fill="orange"
-        stroke="orange"
-        strokeWidth="1"
-      />
-      <Polygon
-        points={`0,0 0,${height} ${widths[0]},${heights[0] - 20} ${widths[1]},${heights[0] + 40} ${
-          widths[2]
-        },${heights[0] - 15} ${widths[3]},${heights[0]} ${widths[4]},${heights[0] + 50} ${
-          widths[4]
-        },0`}
-        fill="black"
-        stroke="black"
-        strokeWidth="1"
-      />
+    <Svg height={heights[3].toString()} width={width.toString()}>
+      <Polygon points={generatePoints(2)} fill="yellow" />
+      <Polygon points={generatePoints(1)} fill="orange" />
+      <Polygon points={generatePoints(0)} fill="black" />
     </Svg>
   );
 };

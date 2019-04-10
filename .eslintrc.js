@@ -13,7 +13,14 @@ module.exports = {
     'no-param-reassign': 'off',
     'import/no-unresolved': 'off',
     'react/no-unescaped-entities': 'off',
-    'react/sort-comp': 'off'
+    'react/sort-comp': 'off',
+    'prefer-destructuring': [
+      'error',
+      {
+        array: false,
+        object: true
+      }
+    ]
   },
   globals: {
     fetch: false
