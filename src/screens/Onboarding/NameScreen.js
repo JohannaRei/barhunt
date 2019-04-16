@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Dimensions } from 'react-native';
 import { Screen, TextInput, Text } from '@comp';
 import { Button } from 'native-base';
 
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'absolute',
-    top: 100,
+    top: Dimensions.get('window').height - 150,
     left: 50
   }
 });

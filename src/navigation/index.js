@@ -12,7 +12,8 @@ const OnboardingNavigator = createStackNavigator(
     start: { screen: StartScreen },
     name: { screen: NameScreen },
     selection: { screen: GroupSelectionScreen },
-    group: { screen: GroupRegistrationScreen }
+    group: { screen: GroupRegistrationScreen },
+    home: { screen: HomeScreen }
   },
   { initialRouteName: 'name', headerMode: 'none' }
 );
