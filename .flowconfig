@@ -24,6 +24,7 @@
 [untyped]
 .*/node_modules/.*
 .*/ios/Pods/.*
+.*/native-base-theme/*
 
 [libs]
 node_modules/react-native/Libraries/react-native/react-native-interface.js
@@ -83,4 +84,4 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
 
 [version]
-^0.93.0
+^0.92.0

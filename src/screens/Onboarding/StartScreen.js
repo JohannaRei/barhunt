@@ -1,13 +1,18 @@
 // @flow
 import React, { Component } from 'react';
-import { Dimensions } from 'react-native';
+import { Dimensions, StatusBar } from 'react-native';
 import { Screen, Text, StartBackground } from '@comp';
 import { Button } from 'native-base';
 
 type Props = {
   navigation: any
 };
-type State = {};
+type State = {
+  widths: Array<number>,
+  heights: Array<number>,
+  width: number,
+  points: Array<string>
+};
 
 class StartScreen extends Component<Props, State> {
   constructor(props: Props) {
@@ -48,9 +53,10 @@ class StartScreen extends Component<Props, State> {
     const { points, heights, width } = this.state;
     return (
       <Screen>
+        <StatusBar barStyle="light-content" />
         <StartBackground points={points} totalHeight={heights[3]} width={width} />
         <Text tx="startScreen.welcome" />
-        <Button block onPress={() => navigation.navigate('name')}>
+        <Button block danger onPress={() => navigation.navigate('name')}>
           <Text tx="startScreen.button" />
         </Button>
       </Screen>

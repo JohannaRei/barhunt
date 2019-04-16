@@ -2,7 +2,13 @@
 import React from 'react';
 import { Svg, Polygon } from 'react-native-svg';
 
-const StartBackground = ({ points, totalHeight, width }) => (
+type Props = {
+  points: Array<string>,
+  totalHeight: number,
+  width: number
+};
+
+const StartBackground = ({ points, totalHeight, width }: Props) => (
   <Svg height={totalHeight.toString()} width={width.toString()}>
     <Polygon points={points[2]} fill="yellow" />
     <Polygon points={points[1]} fill="orange" />

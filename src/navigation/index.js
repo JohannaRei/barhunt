@@ -4,10 +4,7 @@ import { HomeScreen, SplashScreen } from '@main';
 import { RegistrationScreen, SigninScreen, AuthScreen } from '@auth';
 import { ChallengeStartScreen, LocationClueScreen } from '@chal';
 import {
-  StartScreen,
-  NameScreen,
-  GroupSelectionScreen,
-  GroupRegistrationScreen
+  StartScreen, NameScreen, GroupSelectionScreen, GroupRegistrationScreen
 } from '@onboard';
 
 const OnboardingNavigator = createStackNavigator(
@@ -17,7 +14,7 @@ const OnboardingNavigator = createStackNavigator(
     selection: { screen: GroupSelectionScreen },
     group: { screen: GroupRegistrationScreen }
   },
-  { initialRouteName: 'start', headerMode: 'none' }
+  { initialRouteName: 'name', headerMode: 'none' }
 );
 
 const AuthNavigator = createStackNavigator(

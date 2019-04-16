@@ -35,7 +35,7 @@ export default class NameScreen extends Component<Props, State> {
           <Text tx="nameScreen.title" />
           <TextInput name="name" onChangeText={this.onChangeName} value={('name', name)} />
         </View>
-        <Button bottom onPress={this.onSubmitName}>
+        <Button style={styles.button} onPress={this.onSubmitName} disabled={name.length < 3}>
           <Text tx="nameScreen.button" />
         </Button>
       </Screen>
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'absolute',
-    bottom: 20
+    top: 100,
+    left: 50
   }
 });
