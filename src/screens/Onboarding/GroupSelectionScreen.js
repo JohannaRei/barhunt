@@ -14,8 +14,7 @@ export default class GroupSelectionScreen extends Component<Props> {
   onPressButton = (type: string) => {
     const { navigation } = this.props;
     if (type === 'solo') {
-      // register team of one logic
-      console.log('team of one');
+      // register team to mst
     }
     navigation.navigate(type);
   };
